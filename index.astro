@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Logo from "../components/logo.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<header
+			class="px-6 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white">
+			<Logo/>
+			<nav>
+				<ul
+					class="flex text-sm [&>li>a]:text-white font-medium inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+				>
+					<li><a href="#">Model S</a></li>
+					<li><a href="#">Model 3</a></li>
+					<li><a href="#">Model X</a></li>
+					<li><a href="#">Model Y</a></li>
+					<li><a href="#">Powerwall</a></li>
+					<li><a href="#">Carga</a></li>
+				</ul>
+			</nav>
+			<nav class="flex flex-grow justify-end basis-0">
+				<ul
+					class="flex text-sm [&>li>a]:text-white font-medium inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+				>
+					<li><a href="#">Soporte</a></li>
+					<li><a href="#">Tienda</a></li>
+					<li><a href="#">Cuenta</a></li>
+					<li><a href="#">Menu</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section
+			class="bg-black h-screen w-screen text-center overflow-hidden relative"
+		>
+			<div class="z-30 relative h-full flex flex-col">
+				<header class="z-30 relative">
+					<h2 class="text-white pt-40 text-5xl font-medium">
+						Disfrute de Tesla
+					</h2>
+					<p class="text-white text-base">
+						Programe una prueba de conduccion hoy mismo
+					</p>
+				</header>
+				<footer class="flex flex-col flex-grow justify-end pb-20">
+					<div>
+						<a
+							class="border-2 border-white text-sm rounded font-medium px-12 py-2 inline-block
+hover:bg-white hover:text-black transition-colors text-white"
+							href="#">Prueba de conduccion</a
+						>
+					</div>
+				</footer>
+			</div>
+			<div class="absolute top-0 buttom-0 h-full z-10">
+				<video autoplay muted loop src="/public/video.webm"></video>
+			</div>
+		</section>
+	</main>
+</Layout>
